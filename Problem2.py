@@ -4,15 +4,15 @@
 #
 # By considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the even-valued terms.
 
-wert1 = 0
-wert2 = 1
-wert3 = 0
+val1 = 0
+val2 = 1
+val3 = 0
 sum = 0
 
 for i in range(32):
-    wert3 = wert1 + wert2
-    wert1 = wert2
-    wert2 = wert3
-    if wert3 <= 4000000 and wert3%2 == 0:
-        sum += wert3
+    val3 = val1 + val2
+    val1 = val2
+    val2 = val3
+    if val3 <= 4000000 and val3%2 == 0:
+        sum += val3
 print(sum)
