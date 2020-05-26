@@ -4,7 +4,7 @@
 
 number = 600851475143
 
-def CheckForPrime(num):
+def check_for_prime(num):
     factor = 0
     for q in range(2, num):
         if num%q == 0:
@@ -15,5 +15,5 @@ def CheckForPrime(num):
         return False
 
 for i in range(1, number+1):
-    if number%i == 0 and CheckForPrime(i):
+    if number%i == 0 and check_for_prime(i):
         print(i)
