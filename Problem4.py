@@ -2,9 +2,9 @@
 #
 # Find the largest palindrome made from the product of two 3-digit numbers.
 
-Palindromes = []
+palindromes = []
 
-def IsPalindrome(num):
+def is_palindrome(num):
     counter = 0
     num_list = [int(i) for i in str(num)]
     for q in range(len(num_list)):
@@ -15,7 +15,7 @@ def IsPalindrome(num):
     else:
         return True
 
-def BubbleSort(arr):
+def bubble_sort(arr):
     n = len(arr)
     for i in range(n):
         for j in range(n-i-1):
@@ -25,11 +25,8 @@ def BubbleSort(arr):
 for i in range(101, 1000):
     for n in range(101, 1000):
         product = i*n
-        #print("{} * {} = {}".format(i, n, product))
-        if IsPalindrome(product):
-            #print("Found Palindrome: {}".format(product))
-            Palindromes.append(product)
+        if is_palindrome(product):
+            palindromes.append(product)
 
-BubbleSort(Palindromes)
-#print(Palindromes)
-print("Largest Palindrome: " + str(Palindromes[len(Palindromes)-1]))
+bubble_sort(palindromes)
+print("Largest Palindrome: " + str(palindromes[len(palindromes)-1]))
