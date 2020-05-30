@@ -24,22 +24,14 @@ num = int("""
 71636269561882670428252483600823257530420752963450""".replace("\n", ""))
 
 adjacent_digits = 13
-products = []
+final_product = 0
 num_digits = [int(n) for n in str(num)]
 
 for i in range(len(num_digits) - (adjacent_digits - 1)):
     product = 1
     for n in range(adjacent_digits):
         product *= num_digits[i+n]
-    if product != 0:
-        products.append(product)
+    if product > final_product:
+        final_product = product
 
-def bubble_sort(arr):
-    n = len(arr)
-    for i in range(n):
-        for j in range(n-i-1):
-            if arr[j] < arr[j+1]:
-                arr[j], arr[j+1] = arr[j+1], arr[j]
-
-bubble_sort(products)
-print(products[0])
+print(final_product)
