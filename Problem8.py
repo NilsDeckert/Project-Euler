@@ -29,14 +29,10 @@ num_digits = [int(n) for n in str(num)]
 
 for i in range(len(num_digits) - (adjacent_digits - 1)):
     product = 1
-    factors = []
     for n in range(adjacent_digits):
-        factors.append(num_digits[i+n])
-    for l in factors:
-        product *= l
+        product *= num_digits[i+n]
     if product != 0:
         products.append(product)
-    factors.clear()
 
 def bubble_sort(arr):
     n = len(arr)
