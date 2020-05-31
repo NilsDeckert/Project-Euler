@@ -11,4 +11,4 @@ for a in range(1, 1000):
                 if (a**2 + b**2) == c**2:
                     print("{} + {} + {} = {}".format(a, b, c, a + b + c))
                     print("{} * {} * {} = {}".format(a, b, c, a * b * c))
-                    break
+                    exit()
