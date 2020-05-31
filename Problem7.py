@@ -6,14 +6,10 @@ counter1 = 2
 counter2 = 0
 
 def check_for_prime(num):
-    factor = 0
-    for q in range(2, num):
-        if num%q == 0:
-            factor += q
-    if factor == 0:
-        return True
-    else:
-        return False
+    for n in range(2, num):
+        if num%n == 0:
+            return False
+    return True
 
 while True:
     if check_for_prime(counter1):
