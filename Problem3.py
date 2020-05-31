@@ -5,14 +5,10 @@
 number = 600851475143
 
 def check_for_prime(num):
-    factor = 0
     for n in range(2, num):
         if num%n == 0:
-            factor += n
-    if factor == 0:
-        return True
-    else:
-        return False
+            return False
+    return True
 
 for n in range(1, number+1):
     if number%n == 0 and check_for_prime(n):
