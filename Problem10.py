@@ -5,7 +5,7 @@ import math
 sum = 0
 
 def check_for_prime(num):
-    for n in range(2, math.floor(math.sqrt(num))):
+    for n in range(2, math.floor(math.sqrt(num)) + 1):
         if num%n == 0:
             return False
     return True
